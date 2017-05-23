@@ -9,7 +9,7 @@ var1 = sc.textFile("retail.csv")
 data = var1.map(lambda x:x.split(','))
 df = sqlContext.createDataFrame(data)
 df.createOrReplaceTempView("table1")
-#df1 = sqlContext.sql("select * from table1")
+
 
 reg = sqlContext.sql("select * from table1 where _11='Regular Air'")
 exp = sqlContext.sql("select * from table1 where _11='Express Air'")
