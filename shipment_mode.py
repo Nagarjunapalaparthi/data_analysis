@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 from pyspark.sql import *
 from pyspark import SparkContext,SparkConf
-#spark = SparkSession.builder.master("local").getOrCreate()
 
 sc = SparkContext(conf=SparkConf())
 sqlContext = SQLContext(sc)
