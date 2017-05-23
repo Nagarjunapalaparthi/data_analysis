@@ -20,9 +20,10 @@ print "Express air deliveries:",list[1]
 print "Truck deliveries:",list[2]
 
 labels = ['Regular','Express','Truck']
+cols = ("blue","yellow","orange")
 
 
-plt.pie(list,labels=labels)
+plt.pie(list,labels=labels,colors=cols,startangle=90,shadow=True,explode=(0.2,0,0),autopct=("%1.1f%%"))
 plt.show()
 
 sc.stop()
