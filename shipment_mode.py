@@ -4,8 +4,8 @@ from pyspark import SparkContext,SparkConf
 
 sc = SparkContext(conf=SparkConf())
 sqlContext = SQLContext(sc)
-var1 = sc.textFile("retail.csv")
-data = var1.map(lambda x:x.split(','))
+rdd = sc.textFile("retail.csv")
+data = rdd.map(lambda x:x.split(','))
 df = sqlContext.createDataFrame(data)
 df.createOrReplaceTempView("table1")
 
